@@ -49,47 +49,66 @@
 <header class="panel-cover panel-cover--collapsed">
 
 
-  <div class="panel-main">
+	<div class="panel-main">
 
-  
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
+	
+		<div class="panel-main__inner panel-inverted">
+		<div class="panel-main__content">
 
-        
+				
 
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">程震宇</a></h1>
-        <hr class="panel-cover__divider" />
+				<h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">程震宇</a></h1>
+				<hr class="panel-cover__divider" />
 
-        
-        <p class="panel-cover__description">
-          做一个文艺范的程序员
-        </p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary" />
-        
+				
+				<p class="panel-cover__description">
+					做一个文艺范的程序员
+				</p>
+				<hr class="panel-cover__divider panel-cover__divider--secondary" />
+				
+				
+			        <!-- 头像效果-start -->
+			        <div class="ih-item circle effect right_to_left">            
+			            <a href="/#blog" title="前往 {{ site.title }} 的主页" class="blog-button">
+			                <div class="img"><img src="/images/my_picture.png" alt="img"></div>
+			                <div class="info">
+			                    <div class="info-back">
+			                        <h2> 
+			                            {% if site.avatarTitle %}
+			                                {{site.avatarTitle}}
+			                            {% endif %}
+			                        </h2>
+			                        <p>
+			                           {% if site.avatarDesc %}
+			                                {{site.avatarDesc}}
+			                            {% endif %}
+			                        </p>
+			                    </div>
+			                </div>
+			            </a>
+			        </div>
+			        <!-- 头像效果-end -->
 
-        <div class="navigation-wrapper">
+				<div class="navigation-wrapper">
+					<nav class="cover-navigation cover-navigation--primary">
+						<ul class="navigation">
+							
+								
+								<li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+							
+								
+								<li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+							
+								
+								<li class="navigation__item"><a href="/love" title="" class="">Love</a></li>
+							
+								
+								<li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+							
 
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
-
-              
-                
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
-              
-                
-                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
-              
-                
-                <li class="navigation__item"><a href="/love" title="" class="">Love</a></li>
-              
-                
-                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
-              
-
-            </ul>
-          </nav>
-
-          <!-- ----------------------------
+						</ul>
+					</nav>
+					<!-- ----------------------------
 To add a new social icon simply duplicate one of the list items from below
 and change the class in the <i> tag to match the desired social network
 and then add your link to the <a>. Here is a full list of social network
@@ -177,15 +196,11 @@ classes that you can use:
 </nav>
 
 
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cover--overlay"></div>
-  </div>
+				</div>
+			</div>
+		</div>
+		<div class="panel-cover--overlay"></div>
+	</div>
 </header>
 
     <div class="content-wrapper">
