@@ -3477,6 +3477,7 @@ body {
     color: #fff;    
     position: relative;
     font-size: 18px;
+    font-family:"Microsoft YaHei",Georgia,serif;
     margin: 0 auto;
     padding-top: 30px;
     height: 30px;
@@ -3486,7 +3487,8 @@ body {
 .ih-item.circle.effect .info p {
     color: #bbb;
     padding: 0px 0px 0px 0px;
-    font-style: italic;
+    font-family:"Microsoft YaHei",Georgia,serif;
+    font-style: normal;
     padding-left: 0px;
     font-size: 10px;
 }
