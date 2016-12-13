@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+       | 程震宇 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Zhenyu">
+    
+    
+
+    <meta name="description" content="node.js 异步编程Tags： nodejs 异步编程 学习记录
+
+1、函数式编程
+
+高阶函数
+偏函数2、难点
+
+
+
+异常处理
+函数嵌套过深
+阻塞代码
+多线程编程f3、异步编程解决方案3.1、事件发布/订阅模式
+
+
+事件发布常常用来解耦业务逻辑，发布者无需关注订阅的侦听器如何实现业务逻辑。
+
+操作简单，示例代码1234567//订阅0emitter.on(&quot;event1&quot;,function(m">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" | 程震宇">
+<meta property="og:url" content="https://zhenyucheng.github.io/2016/12/13/node.js 异步编程/index.html">
+<meta property="og:site_name" content="程震宇">
+<meta property="og:description" content="node.js 异步编程Tags： nodejs 异步编程 学习记录
+
+1、函数式编程
+
+高阶函数
+偏函数2、难点
+
+
+
+异常处理
+函数嵌套过深
+阻塞代码
+多线程编程f3、异步编程解决方案3.1、事件发布/订阅模式
+
+
+事件发布常常用来解耦业务逻辑，发布者无需关注订阅的侦听器如何实现业务逻辑。
+
+操作简单，示例代码1234567//订阅0emitter.on(&quot;event1&quot;,function(m">
+<meta property="og:updated_time" content="2016-12-13T08:56:53.612Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" | 程震宇">
+<meta name="twitter:description" content="node.js 异步编程Tags： nodejs 异步编程 学习记录
+
+1、函数式编程
+
+高阶函数
+偏函数2、难点
+
+
+
+异常处理
+函数嵌套过深
+阻塞代码
+多线程编程f3、异步编程解决方案3.1、事件发布/订阅模式
+
+
+事件发布常常用来解耦业务逻辑，发布者无需关注订阅的侦听器如何实现业务逻辑。
+
+操作简单，示例代码1234567//订阅0emitter.on(&quot;event1&quot;,function(m">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="public/my_picture.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+	<div class="panel-main">
+
+	
+		<div class="panel-main__inner panel-inverted">
+		<div class="panel-main__content">
+
+				
+			        <!-- 头像效果-start -->
+			        <div class="ih-item circle effect right_to_left">            
+			            <a href="/#blog" title="前往程震宇的主页" class="blog-button">
+			                <div class="img"><img src="https://avatars3.githubusercontent.com/u/16819722?v=3&u=6e8c152390d2da482b412ec622b5f2e0e2348366&s=140" alt="img"></div>
+			                <div class="info">
+			                    <div class="info-back">
+			                        <h2> Zhenyu
+			                        </h2>
+			                        <p>IT/无线通信
+			                        </p>
+			                    </div>
+			                </div>
+			            </a>
+			        </div>
+			        <!-- 头像效果-end -->
+
+				<h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">程震宇</a></h1>
+				<hr class="panel-cover__divider" />
+				
+				<p class="panel-cover__description">
+					做一个文艺范的程序员
+				</p>
+				<hr class="panel-cover__divider panel-cover__divider--secondary" />
+				
+
+				<div class="navigation-wrapper">
+					<nav class="cover-navigation cover-navigation--primary">
+						<ul class="navigation">
+							
+								
+								<li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+							
+								
+								<li class="navigation__item"><a href="/love" title="" class="">Love</a></li>
+							
+								
+								<li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+							
+
+						</ul>
+					</nav>
+					<!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+		icon-social-500px
+		icon-social-behance
+		icon-social-delicious
+		icon-social-designer-news
+		icon-social-deviant-art
+		icon-social-digg
+		icon-social-dribbble
+		icon-social-facebook
+		icon-social-flickr
+		icon-social-forrst
+		icon-social-foursquare
+		icon-social-github
+		icon-social-google-plus
+		icon-social-hi5
+		icon-social-instagram
+		icon-social-lastfm
+		icon-social-linkedin
+		icon-social-medium
+		icon-social-myspace
+		icon-social-path
+		icon-social-pinterest
+		icon-social-rdio
+		icon-social-reddit
+		icon-social-skype
+		icon-social-spotify
+		icon-social-stack-overflow
+		icon-social-steam
+		icon-social-stumbleupon
+		icon-social-treehouse
+		icon-social-tumblr
+		icon-social-twitter
+		icon-social-vimeo
+		icon-social-xbox
+		icon-social-yelp
+		icon-social-youtube
+		icon-social-zerply
+		icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+	<ul class="navigation">
+
+		
+			<!-- Github -->
+			<li class="navigation__item">
+				<a href="https://github.com/ZhenyuCheng" title="Zhenyu on GitHub">
+					<i class='icon icon-social-github'></i>
+					<span class="label">GitHub</span>
+				</a>
+			</li>
+		
+
+		<!-- China social icon -->
+		<!--
+		
+			<li class="navigation__item">
+				<a href="" title="">
+					<i class='icon cs-icon-douban'></i>
+					<span class="label">Douban</span>
+				</a>
+			</li>
+
+			<li class="navigation__item">
+				<a href="" title="">
+					<i class='icon cs-icon-weibo'></i>
+					<span class="label">Weibo</span>
+				</a>
+			</li>
+
+		-->
+
+
+
+	</ul>
+</nav>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="panel-cover--overlay"></div>
+	</div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title"></h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-12-13" class="post-meta__date date">2016-12-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="node-js-异步编程"><a href="#node-js-异步编程" class="headerlink" title="node.js 异步编程"></a>node.js 异步编程</h1><p>Tags： nodejs 异步编程 学习记录</p>
+<hr>
+<h2 id="1、函数式编程"><a href="#1、函数式编程" class="headerlink" title="1、函数式编程"></a>1、函数式编程</h2><hr>
+<ul>
+<li>高阶函数</li>
+<li>偏函数<h2 id="2、难点"><a href="#2、难点" class="headerlink" title="2、难点"></a>2、难点</h2></li>
+</ul>
+<hr>
+<ul>
+<li>异常处理</li>
+<li>函数嵌套过深</li>
+<li>阻塞代码</li>
+<li>多线程编程f<h2 id="3、异步编程解决方案"><a href="#3、异步编程解决方案" class="headerlink" title="3、异步编程解决方案"></a>3、异步编程解决方案</h2><h3 id="3-1、事件发布-订阅模式"><a href="#3-1、事件发布-订阅模式" class="headerlink" title="3.1、事件发布/订阅模式"></a>3.1、事件发布/订阅模式</h3></li>
+</ul>
+<blockquote>
+<p>事件发布常常用来解耦业务逻辑，发布者无需关注订阅的侦听器如何实现业务逻辑。</p>
+</blockquote>
+<p>操作简单，示例代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//订阅0</span></div><div class="line">emitter.on(<span class="string">"event1"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">message</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(message);</div><div class="line">&#125;);</div><div class="line"><span class="comment">//发布</span></div><div class="line">emitter.emit(<span class="string">"event1"</span>,<span class="string">"O am message!"</span>);</div><div class="line"><span class="comment">//emit()调用多半是伴随时间循环而异步触发的，故而说事件发布/订阅广泛应用于事件编程。</span></div></pre></td></tr></table></figure></p>
+<p>Node对事件发布/订阅做了额外的处理</p>
+<ol>
+<li>对一个事件添加超多10个侦听器会得到一条警告。</li>
+<li>为了处理异常，EventEmitter对error事件进行了特殊处理。</li>
+</ol>
+<blockquote>
+<ul>
+<li>继承自events模块</li>
+<li>利用事件队列解决雪崩问题</li>
+<li>多异步之间的协作方案</li>
+<li>EventProxy的原理</li>
+<li>EvenrttProxy的异常处理</li>
+</ul>
+</blockquote>
+<h4 id="继承自events模块"><a href="#继承自events模块" class="headerlink" title="继承自events模块"></a><strong>继承自events模块</strong></h4><p>Node在util模块中封装了集成的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> events =<span class="built_in">require</span>(<span class="string">'evbents'</span>),</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Stream</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    events.EventEmitter.call(<span class="keyword">this</span>);</div><div class="line">&#125;</div><div class="line">util.inherits(Stream,events.EventEmitter);</div></pre></td></tr></table></figure></p>
+<h4 id="利用事件队列解决雪崩问题"><a href="#利用事件队列解决雪崩问题" class="headerlink" title="利用事件队列解决雪崩问题"></a><strong>利用事件队列解决雪崩问题</strong></h4><p>雪崩问题：在高访问量、大并发量的情况下缓存失效的情景。<br>EventProxy来自于Backbone的事件模块，它是对事件订阅/发布模式的扩充。<br>Backbone.js为复杂WEB应用程序提供模型(models)、集合(collections)、视图(views)的结构。其中模型用于绑定键值数据和自定义事件；集合附有可枚举函数的丰富API； 视图可以声明事件处理函数，并通过RESRful JSON接口连接到应用程序。<br>此项目托管在 GitHub 上, 并且提供 带注释的源码, 在线的 测试套件, 应用示例, 教程列表 还有一个 实际应用项目的超长列表, 这些项目都使用了 Backbone. Backbone 允许在 MIT 软件协议 下使用.<br>EventProxy的异常处理：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//主要抽象出了done()和fail()函数，简化流程操作和代码量。</div><div class="line">var ep=new EventProxy();</div><div class="line">ep.all(&apos;tpl&apos;,&apos;data&apos;,function(tpl,data)&#123;</div><div class="line">    //成功回调</div><div class="line">    callback(null，&#123;</div><div class="line">        template:tpl,</div><div class="line">        data:data</div><div class="line">    &#125;)；</div><div class="line">&#125;);</div><div class="line">//绑定错误处理函数</div><div class="line">ep.fail(callback);</div><div class="line">fs.readFile(&apos;template.tpl&apos;,&apos;utf-8&apos;,ep.done(&apos;tpl&apos;));</div><div class="line">db.get(&apos;some sql&apos;,ep.done(&apos;data&apos;));</div></pre></td></tr></table></figure></p>
+<h3 id="3-2、Promise-Deferred模式"><a href="#3-2、Promise-Deferred模式" class="headerlink" title="3.2、Promise/Deferred模式"></a>3.2、Promise/Deferred模式</h3><h3 id="3-3、流程控制库"><a href="#3-3、流程控制库" class="headerlink" title="3.3、流程控制库"></a>3.3、流程控制库</h3>
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2016/12/13/node.js 异步编程/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"zhenyucheng"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy;Copyright 程震宇 2016 | </a>主题 <a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260794619'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260794619' type='text/javascript'%3E%3C/script%3E"));</script>
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

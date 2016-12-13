@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+       | 程震宇 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Zhenyu">
+    
+    
+
+    <meta name="description" content="Sequelize SQL 随记Tags： 学习记录 SQL
+
+1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" | 程震宇">
+<meta property="og:url" content="https://zhenyucheng.github.io/2016/12/13/Sequelize SQL 随记/index.html">
+<meta property="og:site_name" content="程震宇">
+<meta property="og:description" content="Sequelize SQL 随记Tags： 学习记录 SQL
+
+1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;">
+<meta property="og:updated_time" content="2016-12-13T08:56:53.612Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" | 程震宇">
+<meta name="twitter:description" content="Sequelize SQL 随记Tags： 学习记录 SQL
+
+1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="public/my_picture.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+	<div class="panel-main">
+
+	
+		<div class="panel-main__inner panel-inverted">
+		<div class="panel-main__content">
+
+				
+			        <!-- 头像效果-start -->
+			        <div class="ih-item circle effect right_to_left">            
+			            <a href="/#blog" title="前往程震宇的主页" class="blog-button">
+			                <div class="img"><img src="https://avatars3.githubusercontent.com/u/16819722?v=3&u=6e8c152390d2da482b412ec622b5f2e0e2348366&s=140" alt="img"></div>
+			                <div class="info">
+			                    <div class="info-back">
+			                        <h2> Zhenyu
+			                        </h2>
+			                        <p>IT/无线通信
+			                        </p>
+			                    </div>
+			                </div>
+			            </a>
+			        </div>
+			        <!-- 头像效果-end -->
+
+				<h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">程震宇</a></h1>
+				<hr class="panel-cover__divider" />
+				
+				<p class="panel-cover__description">
+					做一个文艺范的程序员
+				</p>
+				<hr class="panel-cover__divider panel-cover__divider--secondary" />
+				
+
+				<div class="navigation-wrapper">
+					<nav class="cover-navigation cover-navigation--primary">
+						<ul class="navigation">
+							
+								
+								<li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+							
+								
+								<li class="navigation__item"><a href="/love" title="" class="">Love</a></li>
+							
+								
+								<li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+							
+
+						</ul>
+					</nav>
+					<!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+		icon-social-500px
+		icon-social-behance
+		icon-social-delicious
+		icon-social-designer-news
+		icon-social-deviant-art
+		icon-social-digg
+		icon-social-dribbble
+		icon-social-facebook
+		icon-social-flickr
+		icon-social-forrst
+		icon-social-foursquare
+		icon-social-github
+		icon-social-google-plus
+		icon-social-hi5
+		icon-social-instagram
+		icon-social-lastfm
+		icon-social-linkedin
+		icon-social-medium
+		icon-social-myspace
+		icon-social-path
+		icon-social-pinterest
+		icon-social-rdio
+		icon-social-reddit
+		icon-social-skype
+		icon-social-spotify
+		icon-social-stack-overflow
+		icon-social-steam
+		icon-social-stumbleupon
+		icon-social-treehouse
+		icon-social-tumblr
+		icon-social-twitter
+		icon-social-vimeo
+		icon-social-xbox
+		icon-social-yelp
+		icon-social-youtube
+		icon-social-zerply
+		icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+	<ul class="navigation">
+
+		
+			<!-- Github -->
+			<li class="navigation__item">
+				<a href="https://github.com/ZhenyuCheng" title="Zhenyu on GitHub">
+					<i class='icon icon-social-github'></i>
+					<span class="label">GitHub</span>
+				</a>
+			</li>
+		
+
+		<!-- China social icon -->
+		<!--
+		
+			<li class="navigation__item">
+				<a href="" title="">
+					<i class='icon cs-icon-douban'></i>
+					<span class="label">Douban</span>
+				</a>
+			</li>
+
+			<li class="navigation__item">
+				<a href="" title="">
+					<i class='icon cs-icon-weibo'></i>
+					<span class="label">Weibo</span>
+				</a>
+			</li>
+
+		-->
+
+
+
+	</ul>
+</nav>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="panel-cover--overlay"></div>
+	</div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title"></h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-12-13" class="post-meta__date date">2016-12-13</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="Sequelize-SQL-随记"><a href="#Sequelize-SQL-随记" class="headerlink" title="Sequelize SQL 随记"></a>Sequelize SQL 随记</h1><p>Tags： 学习记录 SQL</p>
+<hr>
+<h3 id="1、Relations-Associations"><a href="#1、Relations-Associations" class="headerlink" title="1、Relations / Associations"></a>1、Relations / Associations</h3><h4 id="1-7-关系检查-Check-associations"><a href="#1-7-关系检查-Check-associations" class="headerlink" title="1.7 关系检查(Check associations)"></a>1.7 关系检查(Check associations)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 检查对象是否是关联对象之一：</span></div><div class="line">Project.create(&#123; <span class="comment">/* */</span> &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">project</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> User.create(&#123; <span class="comment">/* */</span> &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> project.hasUser(user).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">      <span class="comment">// false</span></div><div class="line">      <span class="keyword">return</span> project.addUser(user).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> project.hasUser(user).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">          <span class="comment">// true</span></div><div class="line">        &#125;)</div><div class="line">      &#125;)</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div><div class="line"><span class="comment">// 检查所有对象是符合预期：</span></div><div class="line"><span class="comment">// 假设已有一个 project 和两个 users</span></div><div class="line">project.setUsers([user1, user2]).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> project.hasUsers([user1]);</div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">  <span class="comment">// false</span></div><div class="line">  <span class="keyword">return</span> project.hasUsers([user1, user2]);</div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">  <span class="comment">// true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="1-8-外键-Foreign-Keys"><a href="#1-8-外键-Foreign-Keys" class="headerlink" title="1.8 外键(Foreign Keys)"></a>1.8 外键(Foreign Keys)</h4><p>Sequelize中，如果创建了两个模型之间的关联，那么相关联的外键会被自动创建：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Task = <span class="keyword">this</span>.sequelize.define(<span class="string">'task'</span>, &#123; <span class="attr">title</span>: Sequelize.STRING &#125;)</div><div class="line">  , User = <span class="keyword">this</span>.sequelize.define(<span class="string">'user'</span>, &#123; <span class="attr">username</span>: Sequelize.STRING &#125;)</div><div class="line">User.hasMany(Task)</div><div class="line">Task.belongsTo(User)</div></pre></td></tr></table></figure></p>
+<p>会生成以下SQL 语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE IF NOT EXISTS `User` (</div><div class="line">  `id` INTEGER PRIMARY KEY,</div><div class="line">  `username` VARCHAR(255)</div><div class="line">);</div><div class="line"></div><div class="line">CREATE TABLE IF NOT EXISTS `Task` (</div><div class="line">  `id` INTEGER PRIMARY KEY,</div><div class="line">  `title` VARCHAR(255),</div><div class="line">  `user_id` INTEGER REFERENCES `User` (`id`) ON DELETE SET NULL ON UPDATE CASCADE</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>task 和 user之间的关系通过task表的外键user_id引入，并REFERENCES引用user表。默认情况下，引用的user 如果被删除那么user_id会被设置为NULL，并且会随user id的更新而更新。这些选项可以在建立关系时通过MonUpdate和onDelete选项修改。可选项有：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">RESTRICT, CASCADE, NO ACTION, SET DEFAULT, SET NULL</div></pre></td></tr></table></figure></p>
+<p>对于 1:1 和 1:m 的关系，默认的删除选项是SET NULL，更新选项是CASCADE。而 n:m 的关系，两者都是CASCADE。这意味着，你从 n:m 关系的任一方删除或更新数据，其所对应的关联数据也会同时被删除或更新。<br>添加表之间的约束意味着，使用sequelize.sync创建表时，相关的表在数据库中必须有一定创建顺序。如果Task 表引用了User，那么User 必须在Task 之前创建。有时这会导致循环引用，想象一个场景：一个文档和版本，一个文档可以有多个版本，并且为了方便，文档对它的当前版本有一个引用。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Document = <span class="keyword">this</span>.sequelize.define(<span class="string">'document'</span>, &#123;</div><div class="line">      <span class="attr">author</span>: Sequelize.STRING</div><div class="line">    &#125;)</div><div class="line">  , Version = <span class="keyword">this</span>.sequelize.define(<span class="string">'version'</span>, &#123;</div><div class="line">      <span class="attr">timestamp</span>: Sequelize.DATE</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">Document.hasMany(Version) <span class="comment">// 添中 document_id 到 version中</span></div><div class="line">Document.belongsTo(Version, &#123; <span class="attr">as</span>: <span class="string">'Current'</span>, <span class="attr">foreignKey</span>: <span class="string">'current_version_id'</span>&#125;) <span class="comment">// 添加 current_version_id 到文档中</span></div></pre></td></tr></table></figure></p>
+<p>这时可能出现类似以下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Cyclic dependency found. &apos;Document&apos; is dependent of itself. Dependency Chain: Document -&gt; Version =&gt; Document</div></pre></td></tr></table></figure></p>
+<p>为了解决这个问题，可以传入一个constraints: false选项：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Document.hasMany(Version)</div><div class="line">Document.belongsTo(Version, &#123; <span class="attr">as</span>: <span class="string">'Current'</span>, <span class="attr">foreignKey</span>: <span class="string">'current_version_id'</span>, <span class="attr">constraints</span>: <span class="literal">false</span>&#125;)</div></pre></td></tr></table></figure></p>
+<p>这时会按以下顺序将表同步到数据库中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE IF NOT EXISTS `Document` (</div><div class="line">  `id` INTEGER PRIMARY KEY,</div><div class="line">  `author` VARCHAR(255),</div><div class="line">  `current_version_id` INTEGER</div><div class="line">);</div><div class="line">CREATE TABLE IF NOT EXISTS `Version` (</div><div class="line">  `id` INTEGER PRIMARY KEY,</div><div class="line">  `timestamp` DATETIME,</div><div class="line">  `document_id` INTEGER REFERENCES `Document` (`id`) ON DELETE SET NULL ON UPDATE CASCADE</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>没有约束的外键引用</p>
+<p>有时我们想添加一个外键引用，但不想添加任何约束或关系。这种情形下，你可以在schema定义时手动添加reference属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Series, Trainer, Video</div><div class="line"> </div><div class="line"><span class="comment">// 在调用Trainer.hasMany(series)方法的，Series 有一个 trainer_id=Trainer.id 的外键引用</span></div><div class="line">Series = sequelize.define(<span class="string">'series'</span>, &#123;</div><div class="line">  <span class="attr">title</span>:        DataTypes.STRING,</div><div class="line">  <span class="attr">sub_title</span>:    DataTypes.STRING,</div><div class="line">  <span class="attr">description</span>:  DataTypes.TEXT,</div><div class="line"> </div><div class="line">  <span class="comment">// Set FK relationship (hasMany) with `Trainer`</span></div><div class="line">  trainer_id: &#123;</div><div class="line">    <span class="attr">type</span>: DataTypes.INTEGER,</div><div class="line">    <span class="attr">references</span>: &#123;</div><div class="line">      <span class="attr">model</span>: <span class="string">"trainers"</span>,</div><div class="line">      <span class="attr">key</span>: <span class="string">"id"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"> </div><div class="line">Trainer = sequelize.define(<span class="string">'trainer'</span>, &#123;</div><div class="line">  <span class="attr">first_name</span>: DataTypes.STRING,</div><div class="line">  <span class="attr">last_name</span>:  DataTypes.STRING</div><div class="line">&#125;);</div><div class="line"> </div><div class="line"><span class="comment">// 在调用Series.hasOne(Video)后，Video has a series_id=Series.id 的外键引用……</span></div><div class="line">Video = sequelize.define(<span class="string">'video'</span>, &#123;</div><div class="line">  <span class="attr">title</span>:        DataTypes.STRING,</div><div class="line">  <span class="attr">sequence</span>:     DataTypes.INTEGER,</div><div class="line">  <span class="attr">description</span>:  DataTypes.TEXT,</div><div class="line"> </div><div class="line">  <span class="comment">// 为`Series`设置 hasOne关系</span></div><div class="line">  series_id: &#123;</div><div class="line">    <span class="attr">type</span>: DataTypes.INTEGER,</div><div class="line">    <span class="attr">references</span>: &#123;</div><div class="line">      <span class="attr">model</span>: Series, <span class="comment">// 可以是一个表示表名的字符串或模型引用</span></div><div class="line">      key:   <span class="string">"id"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"> </div><div class="line">Series.hasOne(Video);</div><div class="line">Trainer.hasMany(Series);</div></pre></td></tr></table></figure></p>
+<h3 id="2、Transaction"><a href="#2、Transaction" class="headerlink" title="2、Transaction"></a>2、Transaction</h3><h4 id="2-1、-事务的使用"><a href="#2-1、-事务的使用" class="headerlink" title="2.1、 事务的使用"></a>2.1、 事务的使用</h4><p>Sequelize有两种使用事务的方式：</p>
+<p>基于Promise结果链的自动提交/回滚<br>另一种是不自动提交和回滚，而由用户控制事务</p>
+<h5 id="2-1-1-受管理的事务（auto-callback）"><a href="#2-1-1-受管理的事务（auto-callback）" class="headerlink" title="2.1.1 受管理的事务（auto-callback）"></a>2.1.1 受管理的事务（auto-callback）</h5><p>受管理的事务会自动提交或回滚，你可以向sequelize.transaction方法传递一个回调函数来启动一个事务。</p>
+<p>需要注意，在这种方式下传递给回调函数的transaction会返回一个promise链，在promise链中（then或catch）中并不能调用t.commit()或t.rollback()来控制事务。在这种方式下，如果使用事务的所有promise链都执行成功，则自动提交；如果其中之一执行失败，则自动回滚。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span> sequelize.transaction(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// 要确保所有的查询链都有return返回</span></div><div class="line">  <span class="keyword">return</span> User.create(&#123;</div><div class="line">    <span class="attr">firstName</span>: <span class="string">'Abraham'</span>,</div><div class="line">    <span class="attr">lastName</span>: <span class="string">'Lincoln'</span></div><div class="line">  &#125;, &#123;<span class="attr">transaction</span>: t&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">user</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> user.setShooter(&#123;</div><div class="line">      <span class="attr">firstName</span>: <span class="string">'John'</span>,</div><div class="line">      <span class="attr">lastName</span>: <span class="string">'Boothe'</span></div><div class="line">    &#125;, &#123;<span class="attr">transaction</span>: t&#125;);</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</div><div class="line">  <span class="comment">// Transaction 会自动提交</span></div><div class="line">  <span class="comment">// result 是事务回调中使用promise链中执行结果</span></div><div class="line">&#125;).catch(<span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">  <span class="comment">// Transaction 会自动回滚</span></div><div class="line">  <span class="comment">// err 是事务回调中使用promise链中的异常结果</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>抛出错误并回滚</strong></p>
+<p>使用受管理的事务时，不能通过手工调用的方式来提交或回滚事务。但在需要时（如验证失败），可以通过throw来抛出异常回滚事务。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span> sequelize.transaction(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> User.create(&#123;</div><div class="line">    <span class="attr">firstName</span>: <span class="string">'Abraham'</span>,</div><div class="line">    <span class="attr">lastName</span>: <span class="string">'Lincoln'</span></div><div class="line">  &#125;, &#123;<span class="attr">transaction</span>: t&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">user</span>) </span>&#123;</div><div class="line">    <span class="comment">// 注意，虽然所有操作成功但仍会回滚</span></div><div class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><strong>自动传递事务到所有的查询中</strong></p>
+<p>在上面的示例中，我们通过向第二个参数中添加{ transaction: t }选项来手工传递事务。如果要自动传递事务到所有的查询中，需要安装continuation local storage（CLS）模块并在代码中创建一个命名空间实例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cls = <span class="built_in">require</span>(<span class="string">'continuation-local-storage'</span>),</div><div class="line">    namespace = cls.createNamespace(<span class="string">'my-very-own-namespace'</span>);</div></pre></td></tr></table></figure></p>
+<p>启用CLS，需要在Sequlize构造函数属性中设置命名空间：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Sequelize = <span class="built_in">require</span>(<span class="string">'sequelize'</span>);</div><div class="line">Sequelize.cls = namespace;</div><div class="line"></div><div class="line"><span class="keyword">new</span> Sequelize(....);</div><div class="line"><span class="string">``</span><span class="string">` </span></div><div class="line">注意cls必须在constructor构造函数中设置，而不能在sequlize实例中设置。</div><div class="line"></div><div class="line">CLS的工作方式就像一个回调函数的本地线程存储。在sequlize中启用CLS后，需要在启动事务时设置transaction命名空间。在一个回调链中设置的变量时私有的，所以几个并发事务可以同时存在。</div><div class="line">`<span class="string">``</span> javascript</div><div class="line">sequelize.transaction(<span class="function"><span class="keyword">function</span> (<span class="params">t1</span>) </span>&#123;</div><div class="line">  namespace.get(<span class="string">'transaction'</span>) === t1; <span class="comment">// true</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">sequelize.transaction(<span class="function"><span class="keyword">function</span> (<span class="params">t2</span>) </span>&#123;</div><div class="line">  namespace.get(<span class="string">'transaction'</span>) === t2; <span class="comment">// true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>大多数情况下，你不用通过namespace.get(‘transaction’)直接访问命名空间，因为所有的查询都会自动查找事务的命名空间。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sequelize.transaction(<span class="function"><span class="keyword">function</span> (<span class="params">t1</span>) </span>&#123;</div><div class="line">  <span class="comment">// 启用 CLS 后，会在自动在事务中执行create 操作</span></div><div class="line">  <span class="keyword">return</span> User.create(&#123; <span class="attr">name</span>: <span class="string">'Alice'</span> &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h5 id="2-1-1-不受管理的事务（then-callback）"><a href="#2-1-1-不受管理的事务（then-callback）" class="headerlink" title="2.1.1 不受管理的事务（then-callback）"></a>2.1.1 不受管理的事务（then-callback）</h5><p>不受管理的事务需要你强制提交或回滚，如果不进行这些操作，事务会一直保持挂起状态直到超时。</p>
+<p>启动一个不受管理的事务，同样是调用sequelize.transaction()方法，但不传递回调函数参数（仍然可以传递选项参数）。然后可以在其返回的promisethen方法中手工控制事务：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">return</span> sequelize.transaction().then(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> User.create(&#123;</div><div class="line">    <span class="attr">firstName</span>: <span class="string">'Homer'</span>,</div><div class="line">    <span class="attr">lastName</span>: <span class="string">'Simpson'</span></div><div class="line">  &#125;, &#123;<span class="attr">transaction</span>: t&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">user</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> user.addSibling(&#123;</div><div class="line">      <span class="attr">firstName</span>: <span class="string">'Lisa'</span>,</div><div class="line">      <span class="attr">lastName</span>: <span class="string">'Simpson'</span></div><div class="line">    &#125;, &#123;<span class="attr">transaction</span>: t&#125;);</div><div class="line">  &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> t.commit();</div><div class="line">  &#125;).catch(<span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> t.rollback();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2016/12/13/Sequelize SQL 随记/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"zhenyucheng"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy;Copyright 程震宇 2016 | </a>主题 <a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260794619'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260794619' type='text/javascript'%3E%3C/script%3E"));</script>
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
