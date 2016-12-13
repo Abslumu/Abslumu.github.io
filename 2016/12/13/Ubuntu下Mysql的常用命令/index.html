@@ -7,7 +7,7 @@
     
 
     <title>
-       | 程震宇 
+      Ubuntu下Mysql的常用命令 | 程震宇 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,22 +16,16 @@
     
     
 
-    <meta name="description" content="Ubuntu下Mysql的常用命令Tags： SQL 学习记录
-
-###一、mysql服务操作1234567sql-&amp;gt; status;//查看数据库版本 net start mysql //启动mysql服务 net stop mysql //停止mysql服务　 mysql -h主机地址 -u用户名 －p用户密码 //进入mysql数据库 quit //退出mysql操作 mysqladm">
+    <meta name="description" content="###一、mysql服务操作1234567sql-&amp;gt; status;//查看数据库版本 net start mysql //启动mysql服务 net stop mysql //停止mysql服务　 mysql -h主机地址 -u用户名 －p用户密码 //进入mysql数据库 quit //退出mysql操作 mysqladmin -u用户名 -p旧密码 password 新密码 //更改">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" | 程震宇">
+<meta property="og:title" content="Ubuntu下Mysql的常用命令 | 程震宇">
 <meta property="og:url" content="https://zhenyucheng.github.io/2016/12/13/Ubuntu下Mysql的常用命令/index.html">
 <meta property="og:site_name" content="程震宇">
-<meta property="og:description" content="Ubuntu下Mysql的常用命令Tags： SQL 学习记录
-
-###一、mysql服务操作1234567sql-&amp;gt; status;//查看数据库版本 net start mysql //启动mysql服务 net stop mysql //停止mysql服务　 mysql -h主机地址 -u用户名 －p用户密码 //进入mysql数据库 quit //退出mysql操作 mysqladm">
-<meta property="og:updated_time" content="2016-12-13T08:56:53.612Z">
+<meta property="og:description" content="###一、mysql服务操作1234567sql-&amp;gt; status;//查看数据库版本 net start mysql //启动mysql服务 net stop mysql //停止mysql服务　 mysql -h主机地址 -u用户名 －p用户密码 //进入mysql数据库 quit //退出mysql操作 mysqladmin -u用户名 -p旧密码 password 新密码 //更改">
+<meta property="og:updated_time" content="2016-12-13T09:07:34.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" | 程震宇">
-<meta name="twitter:description" content="Ubuntu下Mysql的常用命令Tags： SQL 学习记录
-
-###一、mysql服务操作1234567sql-&amp;gt; status;//查看数据库版本 net start mysql //启动mysql服务 net stop mysql //停止mysql服务　 mysql -h主机地址 -u用户名 －p用户密码 //进入mysql数据库 quit //退出mysql操作 mysqladm">
+<meta name="twitter:title" content="Ubuntu下Mysql的常用命令 | 程震宇">
+<meta name="twitter:description" content="###一、mysql服务操作1234567sql-&amp;gt; status;//查看数据库版本 net start mysql //启动mysql服务 net stop mysql //停止mysql服务　 mysql -h主机地址 -u用户名 －p用户密码 //进入mysql数据库 quit //退出mysql操作 mysqladmin -u用户名 -p旧密码 password 新密码 //更改">
     
     
     
@@ -206,7 +200,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title"></h1>
+    <h1 class="post-title">Ubuntu下Mysql的常用命令</h1>
 
     
 
@@ -218,6 +212,11 @@ classes that you can use:
           
 
           
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/SQL-学习记录/">SQL 学习记录</a>
+            </font>
+          
 
       </span>
     </div>
@@ -227,8 +226,7 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h1 id="Ubuntu下Mysql的常用命令"><a href="#Ubuntu下Mysql的常用命令" class="headerlink" title="Ubuntu下Mysql的常用命令"></a>Ubuntu下Mysql的常用命令</h1><p>Tags： SQL 学习记录</p>
-<hr>
+    <hr>
 <p>###一、mysql服务操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sql-&gt; status;//查看数据库版本 </div><div class="line">net start mysql //启动mysql服务 </div><div class="line">net stop mysql //停止mysql服务　 </div><div class="line">mysql -h主机地址 -u用户名 －p用户密码 //进入mysql数据库 </div><div class="line">quit //退出mysql操作 </div><div class="line">mysqladmin -u用户名 -p旧密码 password 新密码 //更改密码 </div><div class="line">grant select on 数据库.* to 用户名@登录主机 identified by &quot;密码&quot; //增加新用户</div></pre></td></tr></table></figure></p>
 <p><strong>Exemple:</strong><br>例2、增加一个用户test2密码为abc,让他只可以在localhost上登录，并可以对数据库mydb进行查询、插入、修改、删除的操作 （localhost指本地主机，即MYSQL数据库所在的那台主机），这样用户即使用知道test2的密码，他也无法从internet上直接访问数据 库，只能通过MYSQL主机上的web页来访问了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grant select,insert,update,delete on mydb.* to test2@localhost identified by &quot;abc&quot;;</div></pre></td></tr></table></figure></p>
 <p>如果你不想test2有密码，可以再打一个命令将密码消掉。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grant select,insert,update,delete on mydb.* to test2@localhost identified by &quot;&quot;;</div></pre></td></tr></table></figure></p>

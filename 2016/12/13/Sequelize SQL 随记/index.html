@@ -7,7 +7,7 @@
     
 
     <title>
-       | 程震宇 
+      Sequelize SQL 随记 | 程震宇 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,22 +16,16 @@
     
     
 
-    <meta name="description" content="Sequelize SQL 随记Tags： 学习记录 SQL
-
-1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;">
+    <meta name="description" content="1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;#123;  return User.create(&amp;#123">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" | 程震宇">
+<meta property="og:title" content="Sequelize SQL 随记 | 程震宇">
 <meta property="og:url" content="https://zhenyucheng.github.io/2016/12/13/Sequelize SQL 随记/index.html">
 <meta property="og:site_name" content="程震宇">
-<meta property="og:description" content="Sequelize SQL 随记Tags： 学习记录 SQL
-
-1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;">
-<meta property="og:updated_time" content="2016-12-13T08:56:53.612Z">
+<meta property="og:description" content="1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;#123;  return User.create(&amp;#123">
+<meta property="og:updated_time" content="2016-12-13T09:06:52.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" | 程震宇">
-<meta name="twitter:description" content="Sequelize SQL 随记Tags： 学习记录 SQL
-
-1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;">
+<meta name="twitter:title" content="Sequelize SQL 随记 | 程震宇">
+<meta name="twitter:description" content="1、Relations / Associations1.7 关系检查(Check associations)1234567891011121314151617181920212223// 检查对象是否是关联对象之一：Project.create(&amp;#123; /* */ &amp;#125;).then(function(project) &amp;#123;  return User.create(&amp;#123">
     
     
     
@@ -206,7 +200,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title"></h1>
+    <h1 class="post-title">Sequelize SQL 随记</h1>
 
     
 
@@ -218,6 +212,11 @@ classes that you can use:
           
 
           
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/学习记录-SQL/">学习记录 SQL</a>
+            </font>
+          
 
       </span>
     </div>
@@ -227,8 +226,7 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h1 id="Sequelize-SQL-随记"><a href="#Sequelize-SQL-随记" class="headerlink" title="Sequelize SQL 随记"></a>Sequelize SQL 随记</h1><p>Tags： 学习记录 SQL</p>
-<hr>
+    <hr>
 <h3 id="1、Relations-Associations"><a href="#1、Relations-Associations" class="headerlink" title="1、Relations / Associations"></a>1、Relations / Associations</h3><h4 id="1-7-关系检查-Check-associations"><a href="#1-7-关系检查-Check-associations" class="headerlink" title="1.7 关系检查(Check associations)"></a>1.7 关系检查(Check associations)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 检查对象是否是关联对象之一：</span></div><div class="line">Project.create(&#123; <span class="comment">/* */</span> &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">project</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> User.create(&#123; <span class="comment">/* */</span> &#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> project.hasUser(user).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">      <span class="comment">// false</span></div><div class="line">      <span class="keyword">return</span> project.addUser(user).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> project.hasUser(user).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">          <span class="comment">// true</span></div><div class="line">        &#125;)</div><div class="line">      &#125;)</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;)</div><div class="line"><span class="comment">// 检查所有对象是符合预期：</span></div><div class="line"><span class="comment">// 假设已有一个 project 和两个 users</span></div><div class="line">project.setUsers([user1, user2]).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> project.hasUsers([user1]);</div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">  <span class="comment">// false</span></div><div class="line">  <span class="keyword">return</span> project.hasUsers([user1, user2]);</div><div class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</div><div class="line">  <span class="comment">// true</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <h4 id="1-8-外键-Foreign-Keys"><a href="#1-8-外键-Foreign-Keys" class="headerlink" title="1.8 外键(Foreign Keys)"></a>1.8 外键(Foreign Keys)</h4><p>Sequelize中，如果创建了两个模型之间的关联，那么相关联的外键会被自动创建：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Task = <span class="keyword">this</span>.sequelize.define(<span class="string">'task'</span>, &#123; <span class="attr">title</span>: Sequelize.STRING &#125;)</div><div class="line">  , User = <span class="keyword">this</span>.sequelize.define(<span class="string">'user'</span>, &#123; <span class="attr">username</span>: Sequelize.STRING &#125;)</div><div class="line">User.hasMany(Task)</div><div class="line">Task.belongsTo(User)</div></pre></td></tr></table></figure></p>
 <p>会生成以下SQL 语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE IF NOT EXISTS `User` (</div><div class="line">  `id` INTEGER PRIMARY KEY,</div><div class="line">  `username` VARCHAR(255)</div><div class="line">);</div><div class="line"></div><div class="line">CREATE TABLE IF NOT EXISTS `Task` (</div><div class="line">  `id` INTEGER PRIMARY KEY,</div><div class="line">  `title` VARCHAR(255),</div><div class="line">  `user_id` INTEGER REFERENCES `User` (`id`) ON DELETE SET NULL ON UPDATE CASCADE</div><div class="line">);</div></pre></td></tr></table></figure></p>

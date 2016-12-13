@@ -7,7 +7,7 @@
     
 
     <title>
-       | 程震宇 
+      node文件操作 | 程震宇 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,22 +16,16 @@
     
     
 
-    <meta name="description" content="node文件操作Tags）： 学习记录   node 文件
-
-12345678910var fs = require(&apos;fs&apos;);fs.readdirSync(__dirname + &apos;/entity_table&apos;).filter(function (file) &amp;#123;  return (file.indexOf(&apos;.&apos;) !== 0) &amp;amp;&amp;amp; (file !== basena">
+    <meta name="description" content="12345678910var fs = require(&apos;fs&apos;);fs.readdirSync(__dirname + &apos;/entity_table&apos;).filter(function (file) &amp;#123;  return (file.indexOf(&apos;.&apos;) !== 0) &amp;amp;&amp;amp; (file !== basename) &amp;amp;&amp;amp; (file.slice(-3)">
 <meta property="og:type" content="article">
-<meta property="og:title" content=" | 程震宇">
+<meta property="og:title" content="node文件操作 | 程震宇">
 <meta property="og:url" content="https://zhenyucheng.github.io/2016/12/13/node文件操作/index.html">
 <meta property="og:site_name" content="程震宇">
-<meta property="og:description" content="node文件操作Tags）： 学习记录   node 文件
-
-12345678910var fs = require(&apos;fs&apos;);fs.readdirSync(__dirname + &apos;/entity_table&apos;).filter(function (file) &amp;#123;  return (file.indexOf(&apos;.&apos;) !== 0) &amp;amp;&amp;amp; (file !== basena">
-<meta property="og:updated_time" content="2016-12-13T08:56:53.612Z">
+<meta property="og:description" content="12345678910var fs = require(&apos;fs&apos;);fs.readdirSync(__dirname + &apos;/entity_table&apos;).filter(function (file) &amp;#123;  return (file.indexOf(&apos;.&apos;) !== 0) &amp;amp;&amp;amp; (file !== basename) &amp;amp;&amp;amp; (file.slice(-3)">
+<meta property="og:updated_time" content="2016-12-13T09:06:28.520Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content=" | 程震宇">
-<meta name="twitter:description" content="node文件操作Tags）： 学习记录   node 文件
-
-12345678910var fs = require(&apos;fs&apos;);fs.readdirSync(__dirname + &apos;/entity_table&apos;).filter(function (file) &amp;#123;  return (file.indexOf(&apos;.&apos;) !== 0) &amp;amp;&amp;amp; (file !== basena">
+<meta name="twitter:title" content="node文件操作 | 程震宇">
+<meta name="twitter:description" content="12345678910var fs = require(&apos;fs&apos;);fs.readdirSync(__dirname + &apos;/entity_table&apos;).filter(function (file) &amp;#123;  return (file.indexOf(&apos;.&apos;) !== 0) &amp;amp;&amp;amp; (file !== basename) &amp;amp;&amp;amp; (file.slice(-3)">
     
     
     
@@ -206,7 +200,7 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title"></h1>
+    <h1 class="post-title">node文件操作</h1>
 
     
 
@@ -218,6 +212,11 @@ classes that you can use:
           
 
           
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/学习记录-node-文件/">学习记录   node 文件</a>
+            </font>
+          
 
       </span>
     </div>
@@ -227,8 +226,7 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h1 id="node文件操作"><a href="#node文件操作" class="headerlink" title="node文件操作"></a>node文件操作</h1><p>Tags）： 学习记录   node 文件</p>
-<hr>
+    <hr>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line">fs</div><div class="line">.readdirSync(__dirname + <span class="string">'/entity_table'</span>)</div><div class="line">.filter(<span class="function"><span class="keyword">function</span> (<span class="params">file</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> (file.indexOf(<span class="string">'.'</span>) !== <span class="number">0</span>) &amp;&amp; (file !== basename) &amp;&amp; (file.slice(<span class="number">-3</span>) === <span class="string">'.js'</span>);</div><div class="line">&#125;)</div><div class="line">.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">file</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> model = sequelize[<span class="string">'import'</span>](path.join(__dirname + <span class="string">'/entity_table'</span>, file));</div><div class="line">  db[model.name] = model;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 
   </section>
